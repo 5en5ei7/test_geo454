@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Safe Cycling Zürich</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg-1 {
+  background-image: url('images/main_image_william-ducret-9jil0u4IKXI-unsplash.jpg');
+  min-height: 100vh;
+}
+.bgimg-2 {
+  background-image: url("/w3images/parallax2.jpg");
+  min-height: 400px;
+}
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+.placeholder-box {
+  width: 100%;
+  height: 450px;
+  background: #f0f0f0;
+  border: 2px dashed #bbb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  gap: 10px;
+}
+.placeholder-box i { font-size: 3em; }
+.placeholder-box span { font-size: 0.95em; }
+
+/* Mobile fix */
+@media only screen and (max-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+/* Verhindert horizontales Scrollen */
+body {
+  overflow-x: hidden;
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <!-- Hamburger (mobile) -->
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+       href="javascript:void(0);" onclick="toggleFunction()" title="Toggle menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home"     class="w3-bar-item w3-button">HOME</a>
+    <a href="#intro"    class="w3-bar-item w3-button w3-hide-small">INTRODUCTION &amp; MOTIVATION</a>
+    <a href="#map"      class="w3-bar-item w3-button w3-hide-small">INTERACTIVE MAP</a>
+    <a href="#data"     class="w3-bar-item w3-button w3-hide-small">DATA SOURCES</a>
+    <a href="#methods"  class="w3-bar-item w3-button w3-hide-small">METHODS</a>
+    <a href="#findings" class="w3-bar-item w3-button w3-hide-small">FINDINGS</a>
+    <a href="#contact"  class="w3-bar-item w3-button w3-hide-small">CONTACT</a>
+  </div>
+  <!-- Mobile dropdown -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#intro"    class="w3-bar-item w3-button" onclick="toggleFunction()">INTRODUCTION &amp; MOTIVATION</a>
+    <a href="#map"      class="w3-bar-item w3-button" onclick="toggleFunction()">INTERACTIVE MAP</a>
+    <a href="#data"     class="w3-bar-item w3-button" onclick="toggleFunction()">DATA SOURCES</a>
+    <a href="#methods"  class="w3-bar-item w3-button" onclick="toggleFunction()">METHODS</a>
+    <a href="#findings" class="w3-bar-item w3-button" onclick="toggleFunction()">FINDINGS</a>
+    <a href="#contact"  class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+  </div>
+</div>
+
+<!-- HOME -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">
+      Welcome to Safe Cycling Zürich
+    </span>
+  </div>
+</div>
+
+<!-- INTRODUCTION & MOTIVATION -->
+<div class="w3-content w3-container w3-padding-64" id="intro">
+  <h3 class="w3-center">INTRODUCTION &amp; MOTIVATION</h3>
+  <p class="w3-center"><em>Why this research matters blabla</em></p>
+  <p>
+    It matters! ..... (evt ein Counter einfügen der zusammenzählt wie viele Unfälle oder so bis jetzt)
+  </p>
+  <p>
+    Out motivation...
+  </p>
+
+  <div class="w3-row-padding w3-padding-32 w3-center">
+    <div class="w3-third">
+      <i class="fa fa-question-circle w3-xxlarge"></i>
+      <p><b>Research Question</b></p>
+      <p> Insert here ourt research Q...</p> 
+    </div>
+    <div class="w3-third">
+      <i class="fa fa-bullseye w3-xxlarge"></i>
+      <p><b>Objectives</b></p>
+      <p>List our study objectives...</p>
+    </div>
+    <div class="w3-third">
+      <i class="fa fa-lightbulb-o w3-xxlarge"></i>
+      <p><b>Relevance</b></p>
+      <p>Who benefits from the findings und why matter?</p>
+    </div>
+  </div>
+</div>
+
+<!-- DIVIDER -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">MAP</span>
+  </div>
+</div>
+
+<!-- MAP -->
+<div class="w3-content w3-container w3-padding-64" id="map">
+  <h3 class="w3-center">MAP</h3>
+  <p class="w3-center"><em>Bicycle Accidents in Zürich</em></p>
+  <p>
+    Maybe insert our sketch of what the map will look like here....
+  </p>
+</div>
+
+<!-- DATA SOURCES -->
+<div class="w3-content w3-container w3-padding-64" id="data">
+  <h3 class="w3-center">DATA SOURCES</h3>
+  <p class="w3-center"><em>Overview of datasets used in for this study</em></p>
+  <table class="w3-table w3-striped w3-bordered w3-margin-top">
+    <thead class="w3-dark-grey w3-text-white">
+      <tr>
+        <th>Dataset</th>
+        <th>Provider</th>
+        <th>Period</th>
+        <th>Resolution</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Polizeilich registrierte Verkehrsunfälle auf dem Stadtgebiet Zürich seit 2011</td>
+        <td>Stadt Zürich</td>
+        <td>2011-2025?</td>
+        <td>City of Zürich</td>
+        <td><a href="#">https://data.stadt-zuerich.ch/dataset/sid_dav_strassenverkehrsunfallorte</a></td>
+      </tr>
+  </table>
+</div>
+
+<!-- DIVIDER -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">METHODS &amp; FINDINGS</span>
+  </div>
+</div>
+
+<!-- METHODS -->
+<div class="w3-content w3-container w3-padding-64" id="methods">
+  <h3 class="w3-center">METHODS</h3>
+  <p class="w3-center"><em>How the analysis was conducted</em></p>
+  <p>
+    Write about our methods and so...
+  </p>
+
+  <div class="w3-row-padding w3-padding-32 w3-center">
+    <div class="w3-quarter">
+      <i class="fa fa-database w3-xxlarge"></i>
+      <p><b>Data Cleaning</b></p>
+      <p>Blabla.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-map w3-xxlarge"></i>
+      <p><b>Spatial Analysis</b></p>
+      <p>Blabla.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-bar-chart w3-xxlarge"></i>
+      <p><b>Statistics</b></p>
+      <p>Blabla.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FINDINGS -->
+<div class="w3-content w3-container w3-padding-64" id="findings">
+  <h3 class="w3-center">FINDINGS</h3>
+  <p class="w3-center"><em>Key results and insights</em></p>
+  <p>
+    Summarise our main findings...
+  </p>
+</div>
+
+<!-- CONTACT -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center"><em>Get in touch</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-padding-large">
+      <p><i class="fa fa-institution fa-fw w3-xlarge w3-margin-right"></i> University of Zürich</p>
+      <p><i class="fa fa-map-marker fa-fw w3-xlarge w3-margin-right"></i> Zürich, Switzerland</p>
+      <p><i class="fa fa-envelope fa-fw w3-xlarge w3-margin-right"></i> @uzh.ch</p>
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <p>Leave a message or question:</p>
+      <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+        <div class="w3-half">
+          <input class="w3-input w3-border" type="text" placeholder="Name" name="Name">
+        </div>
+        <div class="w3-half">
+          <input class="w3-input w3-border" type="email" placeholder="Email" name="Email">
+        </div>
+      </div>
+      <textarea class="w3-input w3-border" rows="5" placeholder="Your message" name="Message"></textarea>
+      <button class="w3-button w3-black w3-right w3-section" type="button">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="w3-center w3-black w3-padding-32 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey w3-margin-bottom">
+    <i class="fa fa-arrow-up w3-margin-right"></i>Back to top
+  </a>
+  <p>Safe Cycling Zürich · <span id="year"></span></p>
+</footer>
+
+<script>
+// Auto year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Navbar on scroll
+window.onscroll = function() {
+  var navbar = document.getElementById("myNavbar");
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    navbar.className = "w3-bar w3-card w3-animate-top w3-white";
+  } else {
+    navbar.className = "w3-bar";
+  }
+};
+
+// Mobile menu toggle
+function toggleFunction() {
+  var x = document.getElementById("navDemo");
+  x.className = x.className.indexOf("w3-show") === -1
+    ? x.className + " w3-show"
+    : x.className.replace(" w3-show", "");
+}
+</script>
+
+</body>
+</html>
